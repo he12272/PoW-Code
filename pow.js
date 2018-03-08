@@ -70,7 +70,6 @@ console.log( 'Target=',target.toJSNumber() )
 var hashcode = sha256( sha256(serializeHeader(header)) ); // hash twice
 console.log( 'The hash code=',hashcode.toReverseHexaNotation() );
 // simimulate PoW
-
 var tickStart = new Date();
 console.log("Start Pow at ",tickStart.toLocaleString() );
 header.nonce = 2083200000;
@@ -86,5 +85,5 @@ while(1) {
 }
 var tickEnd = new Date();
 var tick=(tickEnd-tickStart)/1000;
-console.log( "  End Pow at ",tickEnd.toLocaleString(), 'Tick=',tick);
+console.log( "  End Pow at ",tickEnd.toLocaleString(), 'Ticks=',tick,'second');
 console.log( 'Expect=',(20832*tick)/60,'minutes' );
